@@ -110,15 +110,44 @@ header .column span {
 
 .piano-keys .white.active {
   box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(to bottom #fff 0%, #eee 100%)
+  background: linear-gradient(to bottom #fff 0%, #eee 100%);
 }
 
 .piano-keys .black.active {
   box-shadow: inset -5px 5px 10px rgba(255, 255, 255, 0.1);
-  background: linear-gradient(to bottom #000 , #434343)
+  background: linear-gradient(to bottom #000, #434343);
 }
 
-
-.piano-keys .key.hide span{
+.piano-keys .key.hide span {
   display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    transform: rotate(90deg);
+    transform-origin: center;
+    min-height: 100vh;
+  }
+
+  .container {
+    width: 590px;
+    border-radius: 10px;
+    padding: 15px 30px;
+  }
+  header h2 {
+    font-size: 1rem;
+  }
+
+  header .column span {
+    font-weight: 300;
+    margin-right: 10px;
+    font-size: 1rem;
+  }
+
+  .keys-check input {
+  width: 60px;
+  height: 30px;
+  appearance: none;
+  border-radius: 30px;
+  }
 }
